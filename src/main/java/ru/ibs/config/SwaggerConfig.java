@@ -19,8 +19,8 @@ public class SwaggerConfig {
     public OpenAPI springOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("App Logging Sample")
-                        .description("app-logging-sample")
+                        .title("Simple Rest Service")
+                        .description("simple-rest-service")
                         .version(version)
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")));
     }
