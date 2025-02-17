@@ -1,0 +1,30 @@
+server:
+  port: 8085
+project:
+  version: 1.0
+spring:
+  application:
+    name: simple-rest-service
+  #settings of postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5436/sample_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      properties:
+        hibernate:
+          default_schema:public
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    default-schema: public
+  openapi:
+    path: /v3/api-docs
+  springdoc:
+    swagger-ui:
+      enabled: true
+
+
